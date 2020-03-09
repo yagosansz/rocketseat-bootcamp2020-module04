@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @babel/core @babel/preset-env @babel-preset-react webpack webpack-cli -D
+
+PATH: 
+  C:\tools\Cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\tools\Cmder\vendor\conemu-maximus5;C:\tools\Cmder\vendor\conemu-maximus5\ConEmu;C:\Python37\Scripts\;C:\Python37\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Yago\AppData\Local\Microsoft\WindowsApps;C:\Users\Yago\AppData\Local\Yarn\bin;C:\Program Files\Oracle\VirtualBox;C:\Program Files\Docker Toolbox;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin;C:\tools\Cmder;C:\Users\Yago\AppData\Roaming\npm;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\tools\Cmder\vendor\bin;C:\tools\Cmder\bin;C:\tools\Cmder;C:\tools\Cmder\vendor\git-for-windows\cmd;C:\tools\Cmder\vendor\git-for-windows\mingw64\bin;C:\tools\Cmder\vendor\git-for-windows\usr\bin;C:\tools\Cmder\vendor\bin;C:\tools\Cmder;C:\tools\Cmder\vendor\git-for-windows\cmd;C:\tools\Cmder\vendor\git-for-windows\mingw64\bin;C:\tools\Cmder\vendor\git-for-windows\usr\bin;C:\tools\Cmder\vendor\bin;C:\tools\Cmder
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@babel-preset-react: Request "https://registry.yarnpkg.com/@babel-preset-react" returned a 405
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65209:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:129590:22)
+      at Request.emit (events.js:223:5)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:130562:10)
+      at Request.emit (events.js:223:5)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:130484:12)
+      at Object.onceWrapper (events.js:312:28)
+      at IncomingMessage.emit (events.js:228:7)
+      at endReadableNT (_stream_readable.js:1185:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:21)
+
+npm manifest: 
+  {
+    "name": "module4",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
