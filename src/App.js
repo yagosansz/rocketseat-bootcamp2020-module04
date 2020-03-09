@@ -1,8 +1,10 @@
 import React from 'react';
+
 import './App.css';
+import head from './assets/head.jpg';
 
 function App() {
-  return <h1>Hi, dev!</h1>
+  return <img src={head} />
 }
 
 export default App;
