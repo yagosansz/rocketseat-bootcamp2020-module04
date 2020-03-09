@@ -1,10 +1,10 @@
 import React from 'react';
-
 import './App.css';
-import head from './assets/head.jpg';
+
+import TechList from './components/TechList';
 
 function App() {
-  return <img src={head} />
+  return <TechList />
 }
 
 export default App;
