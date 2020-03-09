@@ -1,3 +1,6 @@
-const add = (x, y) => x + y;
+import React from 'react';
+import { render } from 'react-dom';
 
-alert(add(3,4));
+import App from './App';
+
+render(<App />, document.getElementById('app'));
