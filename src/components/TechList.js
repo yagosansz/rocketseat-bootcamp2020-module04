@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class TechList extends Component {
   state = {
+    newTech: '',
     techs: [
       'Node.js',
       'ReactJS',
@@ -9,14 +10,33 @@ class TechList extends Component {
     ]
   };
 
+  handleInputChange = e => {
+    this.setState({ newTech: e.target.value });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      techs: [...this.state.techs, this.state.newTech],
+      newTech: ''
+    })
+  }
+
   render() {
-    console.log(this.state.techs);
     return (
-      <ul>
-        <li>Node.js</li>
-        <li>ReactJS</li>
-        <li>React Native</li>
-      </ul>
+      <Fragment>
+        <form onSubmit={this.handleSubmit}>
+          <ul>
+            {this.state.techs.map(tech => <li key={tech}>{tech}</li>)}
+          </ul>
+          <input 
+            type="text" 
+            onChange={this.handleInputChange} 
+            value={this.state.newTech} 
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </Fragment>
     )
   }
 }
