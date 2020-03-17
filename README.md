@@ -8,14 +8,14 @@ ReactJS - Fundamental Concepts
 
 # What is this project about?
 
-This project is about practicing the basic concepts behind NodeJS that 
-were learned during the second module of GoStack 10 - Bootcamp.
+This project is about learning how the set up the initial configurations of a 
+ReactJS project and its fundamental concepts.
 
 ## How to run this project?
 
   - Install dependencies:
     - `yarn`
-  - Start the back-end:
+  - Start webpack server:
     - `yarn dev`
 
 ## Logbook
@@ -26,13 +26,17 @@ were learned during the second module of GoStack 10 - Bootcamp.
 ```javascript
 module.exports = {
   presets: [
-    // change javascript functionalities that are browser compatible yet (transpile)
+    // change javascript functionalities that are not browser compatible yet (transpile)
     // e.g: import/export, arrow functions, etc...
     '@babel/preset-env',  
-    // change react functionalities that are browser compatible yet
+    // change react functionalities that are not browser compatible yet
     // e.g.: JSX, etc...
     '@babel/preset-react'
   ],
+  // allows declaring the state variable withou a constructor() {}
+  plugins: [
+    '@babel/plugin-proposal-class-properties'
+  ]
 };
 ```
 
@@ -43,6 +47,7 @@ module.exports = {
 
   module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.js'),
+    // where the transpiled code will be stored
     output: {
       path: path.resolve(__dirname, 'public'),
       filename: 'bundle.js',
@@ -59,6 +64,14 @@ module.exports = {
           use: {
             loader: 'babel-loader'
           }
+        }, {
+          test: /\.css$/,
+          use: [
+            // It will load css styles into index.html in a style tag
+            { loader: 'style-loader' },
+            // It will handle imports in css files
+            { loader: 'css-loader' }
+          ]
         }
       ]
     }
